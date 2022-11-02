@@ -15,7 +15,13 @@ const thoughtController = {
         getThoughtById({ params }, res) {
             Thought.findOne({ _id: params.id })
                 .select('-__v')
-                .then(dbThoughtData => res.json(dbThoughtData))
+                .then(dbThoughtData => {
+                    if (!dbThoughtData) {
+                        res.status(404).json({ message: 'No thought found' });
+                        return;
+                    }
+                    res.json(dbThoughtData);
+                })
                 .catch(err => {
                     console.log(err);
                     res.sendStatus(400);
@@ -32,12 +38,12 @@ const thoughtController = {
                     { new: true }
                 );
             })
-            .then(dbUserData => {
-                if (!dbUserData) {
+            .then(dbThoughtData => {
+                if (!dbThoughtData) {
                     res.status(404).json({ message: 'No user found with this id!' });
                     return;
                 }
-                res.json(dbUserData);
+                res.json(dbThoughtData);
             })
             .catch(err => res.json(err));
     },
@@ -92,7 +98,7 @@ const thoughtController = {
             })
             .catch(err => res.json(err));
     },
-    // remove reply
+    // remove reaction
     removeReaction({ params }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
