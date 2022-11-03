@@ -39,7 +39,11 @@ Please email me with questions!
 
 ## Screenshot
 ### User Get Request
-![website-image](https://github.com/cvanbreda91/boastful-social/blob/main/public/images/user-get.png?raw=true)
+![image](https://github.com/cvanbreda91/boastful-social/blob/main/public/images/user-get.png?raw=true)
+### Thought Get Request
+![image](https://user-images.githubusercontent.com/108283919/199640239-ca9111d0-bcd7-413d-a9d4-7bb19fbc8f82.png)
+### Friend Post Request
+
 
 ## Walkthrough Link
 
