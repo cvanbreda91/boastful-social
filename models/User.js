@@ -1,5 +1,9 @@
-const { Schema, model, Types } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const { Schema, model } = require('mongoose');
+
+const validateEmail = (email) => {
+    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return re.test(email);
+};
 
 const UserSchema = new Schema(
     {
@@ -13,9 +17,20 @@ const UserSchema = new Schema(
             type: String,
             unique: true,
             required: true,
-            match: /.+\@.+\..+/
+            email: {
+                type: String,
+                trim: true,
+                lowercase: true,
+                unique: true,
+                required: "Email address is required",
+                validate: [validateEmail, "Please fill a valid email address"],
+                match: [
+                    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                    "Please fill a valid email address",
+                ],
+            },
         },
-        thought: [
+        thoughts: [
             {
                 type: Schema.Types.ObjectId,
                 ref: 'Thought'
@@ -37,7 +52,7 @@ const UserSchema = new Schema(
 
 // get total count of friends and replies on retrieval
 UserSchema.virtual('friendCount').get(function () {
-    return this.friends
+    return this.friends.length
 });
 
 const User = model('User', UserSchema);

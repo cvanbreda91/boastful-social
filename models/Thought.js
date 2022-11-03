@@ -3,7 +3,7 @@ const dateFormat = require('../utils/dateFormat');
 
 const ReactionSchema = new Schema(
     {
-        // set custom id to avoid confusion with parent comment _id
+        // set custom id to avoid confusion with parent thought _id
         reactionId: {
             type: Schema.Types.ObjectId,
             default: () => new Types.ObjectId()
@@ -49,7 +49,7 @@ const ThoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        // use ReplySchema to validate data for a reply
+        // use ReactiomSchema to validate data for a reply
         reactions: [ReactionSchema]
     },
     {
