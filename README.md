@@ -43,7 +43,7 @@ Please email me with questions!
 ### Thought Get Request
 ![image](https://user-images.githubusercontent.com/108283919/199640239-ca9111d0-bcd7-413d-a9d4-7bb19fbc8f82.png)
 ### Friend Post Request
-
+![image](https://github.com/cvanbreda91/boastful-social/blob/main/public/images/friend-post.png?raw=true)
 
 ## Walkthrough Link
 
