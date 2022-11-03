@@ -9,7 +9,7 @@ A social network back-end that allows users to create accounts, add friends, sha
 * [Contribution](#contribution)
 * [Features](#features)
 * [Questions](#questions)
-* [Screenshot](#screenshot)
+* [Screenshots](#screenshots)
 * [Walkthrough Link](#walkthrough-link)
 
 
@@ -37,7 +37,7 @@ Github: cvanbreda91
 Please email me with questions!
 * cvanbreda91@gmail.com
 
-## Screenshot
+## Screenshots
 ### User Get Request
 ![image](https://github.com/cvanbreda91/boastful-social/blob/main/public/images/user-get.png?raw=true)
 ### Thought Get Request
@@ -46,4 +46,4 @@ Please email me with questions!
 ![image](https://github.com/cvanbreda91/boastful-social/blob/main/public/images/friend-post.png?raw=true)
 
 ## Walkthrough Link
-
+https://drive.google.com/file/d/1STDvBBMvP2Uopoxlo6JsxydDdF22F_ju/view?usp=sharing
