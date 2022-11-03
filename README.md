@@ -38,7 +38,8 @@ Please email me with questions!
 * cvanbreda91@gmail.com
 
 ## Screenshot
-![website-image]()
+### User Get Request
+![website-image](https://github.com/cvanbreda91/boastful-social/blob/main/public/images/user-get.png?raw=true)
 
 ## Walkthrough Link
 
